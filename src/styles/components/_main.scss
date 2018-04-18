@@ -1,0 +1,19 @@
+@import 'helpers/_mixins.scss';
+
+main {
+	background-color: #F77;
+	display: flex;
+
+	.container {
+		margin: auto;
+		width: 900px;
+
+		@include phablet {
+			width: 95%;
+		}
+
+		@include mobile {
+			width: 100%;
+		}
+	}
+}

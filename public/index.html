@@ -8,62 +8,85 @@
 </head>
 <body>
 	<nav>
-		<div class="options">
-			<a href="#about">About</a>
-			<a href="#skills">Skills</a>
-			<a href="#projects">Projects</a>
-			<a href="#contact">Contact</a>
-		</div>
-		<div class="icons">
-			<a href="#about"><img src="./img/placeholder-icon.png" alt="icon"></a>
-			<a href="#skills"><img src="./img/placeholder-icon.png" alt="icon"></a>
-			<a href="#projetcs"><img src="./img/placeholder-icon.png" alt="icon"></a>
-			<a href="#contact"><img src="./img/placeholder-icon.png" alt="icon"></a>
+		<div class="container">
+			<div class="options">
+				<a href="#about">About</a>
+				<a href="#skills">Skills</a>
+				<a href="#projects">Projects</a>
+				<a href="#contact">Contact</a>
+			</div>
+			<div class="icons">
+				<a href="#about"><img src="./img/placeholder-icon.png" alt="icon"></a>
+				<a href="#skills"><img src="./img/placeholder-icon.png" alt="icon"></a>
+				<a href="#projects"><img src="./img/placeholder-icon.png" alt="icon"></a>
+				<a href="#contact"><img src="./img/placeholder-icon.png" alt="icon"></a>
+			</div>
 		</div>
 	</nav>
+	<button class="menu">MENU</button>
 	<header>
 		<div class="head_text">
-			<div class="top">Front End Developer</div>
-			<div class="bottom">Ziwa Mukungu</div>
+			<h1 class="top">Front End Developer</h1>
+			<h2 class="bottom">Ziwa Mukungu</h2>
 		</div>
 	</header>
 	<main>
-		<section id="about">
-			<div class="title">About</div>
-			<div class="details">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime facere dolores at harum error? Inventore culpa accusamus assumenda rerum minima quos eligendi sint sit architecto possimus, quae, dolorem tempore id necessitatibus alias suscipit distinctio nisi nostrum ea ullam. Nostrum debitis, ullam cumque a, magnam labore sed voluptatibus modi suscipit fuga officia voluptate recusandae quasi eaque dolores adipisci deserunt praesentium minus id repellat necessitatibus autem? Asperiores fugiat quo ab quasi neque, sequi aperiam perspiciatis voluptate corporis, reprehenderit veniam accusantium!</p>
-			</div>
-		</section>
-		<section id="skills">
-			<div class="title">Skills</div>
-			<div class="details">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero non natus id maiores pariatur, eaque corporis dolore impedit explicabo tempora unde nisi adipisci quaerat molestias rerum soluta, saepe iure ipsum doloremque beatae voluptatem veritatis nesciunt!</p>
-			</div>
-		</section>
-		<section id="projects">
-			<div class="title">Projects</div>
-			<div class="container">
-				<article>
-					<img src="./img/placeholder-image.png" alt="image">
-					<h3>Item</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
-				</article>
-			</div>
-		</section>
-		<section id="contact">
-			<div class="title">Contact</div>
-			<form action="https://mailthis.to/ziwam" method="POST" encType="multipart/form-data">
-				Name<br>
-				<input type="text" name="name" placeholder="Your name"><br>	
-				Email<br>
-		    <input type="email" name="_replyto" placeholder="Your email"><br>
-				Message<br>
-		    <textarea name="message" placeholder="Enter your message here"></textarea><br>
-   			<input type="hidden" name="_subject" value="Website Contact">
-		    <input type="hidden" name="_honeypot" value="">
-		    <input type="submit" value="Send">
-			</form>
-		</section>
+		<div class="container">
+			<section id="about">
+				<h3 class="title">About</h3>
+				<div class="container">
+					<div class="details">
+					<img src="./img/placeholder-image.png" alt="portrait">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime facere dolores at harum error? Inventore culpa accusamus assumenda rerum minima quos eligendi sint sit architecto possimus, quae, dolorem tempore id necessitatibus alias suscipit distinctio nisi nostrum ea ullam. Nostrum debitis, ullam cumque a, magnam labore sed voluptatibus modi suscipit fuga officia voluptate recusandae quasi eaque dolores adipisci deserunt praesentium minus id repellat necessitatibus autem? Asperiores fugiat quo ab quasi neque, sequi aperiam perspiciatis voluptate corporis, reprehenderit veniam accusantium!</p>
+					</div>
+				</div>
+			</section>
+			<section id="skills">
+				<h3 class="title">Skills</h3>
+				<div class="container">
+					<p>HTML</p>
+					<p>CSS</p>
+					<p>Javascript</p>
+					<p>React</p>
+				</div>
+			</section>
+			<section id="projects">
+				<h3 class="title">Projects</h3>
+				<div class="container">
+					<article>
+						<img src="./img/placeholder-image.png" alt="image">
+						<h3>Item</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+					</article>
+					<article>
+						<img src="./img/placeholder-image.png" alt="image">
+						<h3>Item</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+					</article>
+					<article>
+						<img src="./img/placeholder-image.png" alt="image">
+						<h3>Item</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+					</article>
+				</div>
+			</section>
+			<section id="contact">
+				<h3 class="title">Contact</h3>
+				<div class="container">
+					<form action="https://mailthis.to/ziwam" method="POST" encType="multipart/form-data">
+						Name<br>
+						<input type="text" name="name" placeholder="Your name"><br>	
+						Email<br>
+				    <input type="email" name="_replyto" placeholder="Your email"><br>
+						Message<br>
+				    <textarea name="message" placeholder="Enter your message here"></textarea><br>
+		   			<input type="hidden" name="_subject" value="Website Contact">
+				    <input type="hidden" name="_honeypot" value="">
+				    <input type="submit" value="Send">
+					</form>
+				</div>
+			</section>
+		</div>
 	</main>
 	<footer>
 		copyright 2018

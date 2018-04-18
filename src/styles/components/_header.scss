@@ -1,0 +1,15 @@
+@import 'helpers/_variables.scss';
+
+header {
+	background-color: #7CF;
+
+	h1 {
+		margin: 0;
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	padding-top: $navBar;
+}

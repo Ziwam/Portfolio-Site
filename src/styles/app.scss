@@ -3,10 +3,9 @@
 @import 'components/_header.scss';
 @import 'components/_navbar.scss';
 @import 'components/_section.scss';
+@import 'components/_about.scss';
+@import 'components/_contact.scss';
+@import 'components/_project.scss';
+@import 'components/_skill.scss';
 @import 'components/_main.scss';
-
-//Modules
-@import 'modules/_parameters.scss';
-
-//Layout
-@import 'layout/_responsive.scss';
+@import 'components/_base.scss';

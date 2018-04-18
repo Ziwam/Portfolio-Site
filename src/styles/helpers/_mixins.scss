@@ -1,0 +1,25 @@
+@import 'helpers/_variables.scss';
+
+@mixin mobile {
+	@media (max-width: #{$phablet - 1px;}) {
+		@content;
+	}
+}
+
+@mixin phablet {
+	@media (min-width: #{$phablet}) and (max-width: #{$tablet - 1px;}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet}) and (max-width: #{$laptop - 1px;}) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (min-width: #{$laptop}){
+		@content;
+	}
+}

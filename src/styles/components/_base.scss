@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+
+	button {
+		display: none;
+	}
+	
+	@include mobile {
+		button {
+			display: block;
+			position: fixed;
+			height: 50px;
+			width: 50px;
+			top: 0;
+			right: 0;
+		}
+	}
+}

@@ -1,0 +1,133 @@
+@import 'helpers/_mixins.scss';
+@import 'helpers/_variables.scss';
+
+///Default
+nav {
+	background-color: blue;
+	position: fixed;
+	width: 100%;
+	height: $navBar;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: auto;
+		width: 80%;
+		height: 100%;
+
+		.options {
+			display: flex;
+			background-color: red;
+			align-items: center;
+			justify-content: space-between;
+			height: 100%;
+			width: 350px;
+
+			a {
+				display: flex;
+				align-items: center;
+				background-color: #7F8;
+				justify-content: center;
+				height: 100%;
+				width: 85px;
+			}
+		}
+
+		.icons {
+			display: flex;
+			background-color: #CCC;
+			align-items: center;
+			justify-content: space-between;
+			height: 90%;
+			width: 190px;
+
+			a {
+				display: flex;
+				align-items: center;
+				background-color: #fff;
+				justify-content: center;
+				padding: 5px;
+
+				img {
+					height: 32px;
+					width: 32px;
+				}
+			}
+		}
+
+		@include phablet {
+			.options {
+				width: 29vw;
+
+				a {
+					width: 7vw;
+				}
+			}
+
+			.icons {
+				width: 21vw;
+
+				a {
+					height: 100%;
+					width: 5vw;
+					padding: 0;
+
+					img {
+						height: 30px;
+						width: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//Mobile
+@include mobile {
+
+	nav.hidden {
+		display: none;
+	}
+
+	nav {
+		display: block;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 0;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			width: 100%;
+
+			.options {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				margin-top: 80px;
+
+				a {
+					margin: 10px 0;
+					width: 60%;
+				}
+			}
+
+			.icons {
+				height: 10%;
+				margin: 7% 0;
+				width: 200px;
+
+				a {
+
+					img {
+						height: 36px;
+						width: 36px;
+					}
+				}
+			}
+		}
+	}
+}
