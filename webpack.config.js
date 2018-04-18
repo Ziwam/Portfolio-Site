@@ -19,18 +19,30 @@ module.exports = {
   },
   module: {
     // Add loader
-    rules: [{
-    	test:/\.scss$/,
-  		use: [{
-                loader: "style-loader" // creates style nodes from JS strings
-            }, {
-                loader: "css-loader" // translates CSS into CommonJS
-            }, {
-                loader: "sass-loader" // compiles Sass to CSS
-            }]
-    }]
+    rules: [
+	    {
+	      test: /\.js$/,
+	      exclude: /(node_modules|bower_components)/,
+	      use: {
+	        loader: 'babel-loader'
+	      }
+	    },
+	    {
+	    	test:/\.scss$/,
+	  		use: [{
+	                loader: "style-loader" // creates style nodes from JS strings
+	            }, {
+	                loader: "css-loader" // translates CSS into CommonJS
+	            }, {
+	                loader: "sass-loader" // compiles Sass to CSS
+	            }]
+	    }
+    ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  externals: {
+  	jquery: 'jQuery'
+	}
 };

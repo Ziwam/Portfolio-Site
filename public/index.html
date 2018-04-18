@@ -3,21 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title>Portfolio - Ziwa Mukungu</title>
 </head>
 <body>
 	<nav>
-		<div class="nav">
+		<div class="options">
 			<a href="#about">About</a>
 			<a href="#skills">Skills</a>
-			<a href="#projetcs">Projects</a>
+			<a href="#projects">Projects</a>
 			<a href="#contact">Contact</a>
 		</div>
 		<div class="icons">
-			<a href="#about"><img src="/img/placeholder-icon.png" alt="icon"></a>
-			<a href="#skills"><img src="/img/placeholder-icon.png" alt="icon"></a>
-			<a href="#projetcs"><img src="/img/placeholder-icon.png" alt="icon"></a>
-			<a href="#contact"><img src="/img/placeholder-icon.png" alt="icon"></a>
+			<a href="#about"><img src="./img/placeholder-icon.png" alt="icon"></a>
+			<a href="#skills"><img src="./img/placeholder-icon.png" alt="icon"></a>
+			<a href="#projetcs"><img src="./img/placeholder-icon.png" alt="icon"></a>
+			<a href="#contact"><img src="./img/placeholder-icon.png" alt="icon"></a>
 		</div>
 	</nav>
 	<header>
@@ -43,7 +44,7 @@
 			<div class="title">Projects</div>
 			<div class="container">
 				<article>
-					<img src="/img/placeholder-image.png" alt="image">
+					<img src="./img/placeholder-image.png" alt="image">
 					<h3>Item</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
 				</article>
@@ -51,6 +52,17 @@
 		</section>
 		<section id="contact">
 			<div class="title">Contact</div>
+			<form action="https://mailthis.to/ziwam" method="POST" encType="multipart/form-data">
+				Name<br>
+				<input type="text" name="name" placeholder="Your name"><br>	
+				Email<br>
+		    <input type="email" name="_replyto" placeholder="Your email"><br>
+				Message<br>
+		    <textarea name="message" placeholder="Enter your message here"></textarea><br>
+   			<input type="hidden" name="_subject" value="Website Contact">
+		    <input type="hidden" name="_honeypot" value="">
+		    <input type="submit" value="Send">
+			</form>
 		</section>
 	</main>
 	<footer>
