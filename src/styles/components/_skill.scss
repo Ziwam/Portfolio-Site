@@ -1,0 +1,33 @@
+@import 'helpers/_mixins.scss';
+
+#skills {
+	.container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 20px 100px;
+
+		p {
+			background-color: #fff;
+			padding: 10px;
+			margin: 10px 20px;
+		}
+
+		@include mobile {
+			padding: 20px;
+			p {
+				padding: 10px;
+				margin: 10px;
+			}
+			
+		}
+
+		@include phablet {
+			padding: 20px 70px;
+			p {
+				padding: 10px;
+				margin: 10px 20px;
+			}
+		}
+	}
+}

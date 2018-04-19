@@ -1,0 +1,42 @@
+@import 'helpers/_mixins.scss';
+
+#about {
+	.container {
+		display: flex;
+		padding: 20px;
+		justify-content: center;
+
+		img {
+			margin: auto;
+			height: auto; 
+			max-width: 230px;
+	    width: auto; 
+		}
+
+		@include mobile {
+			flex-wrap: wrap;
+			
+			p {
+				max-width: 450px;
+			}
+
+			figure {
+			  order: -1;
+				
+				img {
+					max-width: 200px;
+					max-height: 200px;
+			    width: 100%;
+				}
+			}
+		}
+
+		@include phablet {
+			img {
+				max-width: 200px;
+				max-height: 200px;
+		    width: 20vw; 
+			}
+		}
+	}
+}

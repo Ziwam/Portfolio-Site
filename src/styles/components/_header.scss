@@ -2,14 +2,8 @@
 
 header {
 	background-color: #7CF;
-
-	h1 {
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0;
-	}
-
-	padding-top: $navBar;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

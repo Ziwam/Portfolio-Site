@@ -7,7 +7,7 @@
 	<title>Portfolio - Ziwa Mukungu</title>
 </head>
 <body>
-	<nav>
+	<nav class="hidden">
 		<div class="container">
 			<div class="options">
 				<a href="#about">About</a>
@@ -25,20 +25,20 @@
 	</nav>
 	<button class="menu">MENU</button>
 	<header>
-		<div class="head_text">
+		<div class="head-text">
 			<h1 class="top">Front End Developer</h1>
 			<h2 class="bottom">Ziwa Mukungu</h2>
 		</div>
 	</header>
 	<main>
-		<div class="container">
+		<div class="wrapper">
 			<section id="about">
 				<h3 class="title">About</h3>
 				<div class="container">
-					<div class="details">
-					<img src="./img/placeholder-image.png" alt="portrait">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime facere dolores at harum error? Inventore culpa accusamus assumenda rerum minima quos eligendi sint sit architecto possimus, quae, dolorem tempore id necessitatibus alias suscipit distinctio nisi nostrum ea ullam. Nostrum debitis, ullam cumque a, magnam labore sed voluptatibus modi suscipit fuga officia voluptate recusandae quasi eaque dolores adipisci deserunt praesentium minus id repellat necessitatibus autem? Asperiores fugiat quo ab quasi neque, sequi aperiam perspiciatis voluptate corporis, reprehenderit veniam accusantium!</p>
-					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime facere dolores at harum error? Inventore culpa accusamus assumenda rerum minima quos eligendi sint sit architecto possimus, quae, dolorem tempore id necessitatibus alias suscipit distinctio nisi nostrum ea ullam. Nostrum debitis, ullam cumque a, magnam labore sed voluptatibus modi suscipit fuga officia voluptate recusandae quasi eaque dolores adipisci deserunt praesentium minus id repellat necessitatibus autem? Asperiores fugiat quo ab quasi neque, sequi aperiam perspiciatis voluptate corporis, reprehenderit veniam accusantium!</p>
+					<figure>
+						<img src="./img/placeholder-image.png" alt="portrait">
+					</figure>
 				</div>
 			</section>
 			<section id="skills">
@@ -48,25 +48,43 @@
 					<p>CSS</p>
 					<p>Javascript</p>
 					<p>React</p>
+					<p>Sass</p>
+					<p>jQuery</p>
+					<p>NodeJS</p>
+					<p>Express</p>
+					<p>MongoDB</p>
+					<p>Photoshop</p>
 				</div>
 			</section>
 			<section id="projects">
 				<h3 class="title">Projects</h3>
 				<div class="container">
 					<article>
-						<img src="./img/placeholder-image.png" alt="image">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+						<figure>
+							<img src="./img/placeholder-image.png" alt="image">
+						</figure>
+						<div class="info">
+							<h3>Project Title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+						</div>
 					</article>
 					<article>
-						<img src="./img/placeholder-image.png" alt="image">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+						<figure>
+							<img src="./img/placeholder-image.png" alt="image">
+						</figure>
+						<div class="info">
+							<h3>Project Title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+						</div>
 					</article>
 					<article>
-						<img src="./img/placeholder-image.png" alt="image">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+						<figure>
+							<img src="./img/placeholder-image.png" alt="image">
+						</figure>
+						<div class="info">
+							<h3>Project Title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+						</div>
 					</article>
 				</div>
 			</section>
@@ -74,15 +92,15 @@
 				<h3 class="title">Contact</h3>
 				<div class="container">
 					<form action="https://mailthis.to/ziwam" method="POST" encType="multipart/form-data">
-						Name<br>
-						<input type="text" name="name" placeholder="Your name"><br>	
-						Email<br>
-				    <input type="email" name="_replyto" placeholder="Your email"><br>
-						Message<br>
-				    <textarea name="message" placeholder="Enter your message here"></textarea><br>
+						<label for="name">Name</label>
+						<input id="name" class="entry" type="text" name="name">
+				    <label for="email">Email</label>
+				    <input id="email" class="entry" type="email" name="_replyto">
+				    <label for="text">Message</label>
+				    <textarea id="text" class="message" name="message"></textarea>
 		   			<input type="hidden" name="_subject" value="Website Contact">
 				    <input type="hidden" name="_honeypot" value="">
-				    <input type="submit" value="Send">
+				    <input class="submit" type="submit" value="Submit">
 					</form>
 				</div>
 			</section>
