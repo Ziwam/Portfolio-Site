@@ -3,8 +3,9 @@
 
 ///Default
 nav {
-	background-color: blue;
+	background-color: $black;
 	position: fixed;
+	z-index: 1;
 	width: 100%;
 	height: $navBar;
 
@@ -18,25 +19,23 @@ nav {
 
 		.options {
 			display: flex;
-			background-color: red;
 			align-items: center;
-			justify-content: space-between;
 			height: 100%;
-			width: 350px;
 
 			a {
 				display: flex;
 				align-items: center;
-				background-color: #7F8;
+				background-color: $gray;
 				justify-content: center;
 				height: 100%;
 				width: 85px;
+				text-decoration: none;
+				color: $white;
 			}
 		}
 
 		.icons {
 			display: flex;
-			background-color: #CCC;
 			align-items: center;
 			justify-content: space-between;
 			height: 90%;
@@ -45,7 +44,6 @@ nav {
 			a {
 				display: flex;
 				align-items: center;
-				background-color: #fff;
 				justify-content: center;
 				padding: 5px;
 
@@ -107,21 +105,22 @@ nav {
 				display: flex;
 				flex-direction: column;
 				width: 100%;
-				margin-top: 80px;
+				margin: auto;
+				height: auto;
 
 				a {
 					margin: 10px 0;
 					width: 60%;
+					height: 70px;
+					max-width: 200px;
 				}
 			}
 
 			.icons {
-				height: 10%;
-				margin: 7% 0;
+				height: 12%;
 				width: 200px;
 
 				a {
-
 					img {
 						height: 36px;
 						width: 36px;

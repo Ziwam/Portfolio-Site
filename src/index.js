@@ -1,6 +1,71 @@
 import "./styles/app.scss";
 import $ from "jquery";
 
-$('button').click(()=>{
+const $elems = $('.pause-anim');
+const $cards = $('.card');
+const $window = $(window);
+const $module = $('.project-module');
+const $moduleText = $module.find('.text');
+const $moduleTitle = $module.find('h3');
+const $moduleImg = $module.find('img');
+const $exit_btn = $('.exit-wrapper');
+const viewOffset = 90;
+
+
+let window_height = $window.height();
+
+$('.menu').click(()=>{
 	$('nav').toggleClass('hidden');
+});
+
+$('.study').click((evn)=>{
+	show_projct_module(evn);
+
 })
+
+$exit_btn.click(()=>{
+	show_projct_cards();
+})
+
+$window.on('scroll', check_if_in_view);
+$window.on('resize', () => {window_height = $window.height();});
+
+function check_if_in_view() {
+
+  for (let i = 0; i < $elems.length; i++) {
+  	let elem = $elems[i];
+  	let elemHeight = elem.getBoundingClientRect().height;
+  	let elemTop = elem.getBoundingClientRect().top;
+  	let elemBottom = (elemTop + elemHeight);
+
+  	if((elemBottom >= viewOffset) && (elemTop <= (window_height - viewOffset))){
+  		$elems[i].className = $elems[i].className.replace('pause-anim', 'in-view');
+  	}
+  }
+}
+
+function show_projct_module(evn) {
+	$module.toggleClass('hidden');
+	$exit_btn.toggleClass('hidden');
+	let text = $(evn.target).parent().next('.text').html();
+	let title = $(evn.target).siblings('h3').html();
+	let img_src = $(evn.target).parent().siblings('.project-img').children('img').attr('src');
+	$moduleText.html(text);
+	$moduleTitle.html(title);
+	$moduleImg.attr('src',img_src);
+
+	for(let card of $cards){
+		card.classList.toggle('hidden');
+	}
+}
+
+function show_projct_cards(evn) {
+	$module.toggleClass('hidden');
+	$moduleText.empty();
+	$exit_btn.toggleClass('hidden');
+
+
+	for(let card of $cards){
+		card.classList.toggle('hidden');
+	}
+}

@@ -20,6 +20,14 @@ module.exports = {
   module: {
     // Add loader
     rules: [
+    	{
+			  test: /\.(otf|ttf|eot|woff|woff2|jpg|png)$/,
+			    loader: 'url-loader',
+			    options: {
+			      name: 'public/fonts/[name].[ext]',
+			      limit: 25000
+			    },
+			},
 	    {
 	      test: /\.js$/,
 	      exclude: /(node_modules|bower_components)/,

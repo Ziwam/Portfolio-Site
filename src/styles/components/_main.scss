@@ -1,19 +1,10 @@
 @import 'helpers/_mixins.scss';
+@import 'helpers/_variables.scss';
 
 main {
-	background-color: #F77;
-	display: flex;
+	section {
+		
 
-	.wrapper {
-		margin: auto;
-		width: 900px;
-
-		@include phablet {
-			width: 95%;
-		}
-
-		@include mobile {
-			width: 100%;
-		}
+	
 	}
 }

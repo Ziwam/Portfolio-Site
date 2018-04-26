@@ -2,9 +2,8 @@
 
 #about {
 	.container {
-		display: flex;
-		padding: 20px;
-		justify-content: center;
+		padding: 38px 30px;
+		align-items: center;
 
 		img {
 			margin: auto;
@@ -13,20 +12,26 @@
 	    width: auto; 
 		}
 
+		.text {
+			margin: auto 20px;
+		}
+
 		@include mobile {
 			flex-wrap: wrap;
 			
-			p {
+
+			.text {
 				max-width: 450px;
 			}
 
-			figure {
+			.about-img {
 			  order: -1;
 				
 				img {
 					max-width: 200px;
 					max-height: 200px;
 			    width: 100%;
+			    margin: 16px 0;
 				}
 			}
 		}
@@ -37,6 +42,8 @@
 				max-height: 200px;
 		    width: 20vw; 
 			}
+
+
 		}
 	}
 }

@@ -1,48 +1,160 @@
 @import 'helpers/_mixins.scss';
+@import 'helpers/_variables.scss';
 
 #projects {
 	.container {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		padding: 20px 100px;
+		padding: 38px 30px ;
+		flex-wrap: wrap;
 
-		article {
+		.exit-wrapper {
+			margin-left: auto;
+			height: 0;
+
+			&.hidden {
+				display: none;
+			}
+			
+			button {
+				position: relative;
+				height: 38px;
+				width: 50px;
+				background-color: $white;
+				border-style: none;
+				top: -38px;
+				left: 30px;
+			}
+		}
+
+		.project-module {
 			display: flex;
-			justify-content: center;
+			margin: 20px 0;
+			flex-direction: column;
+
+			&.hidden {
+				display: none;
+			}
+
+			h3 {
+				margin: 12px auto;
+			}
+
+			.info-container {
+				display: flex;
+				align-items: center;
+
+				.text {
+					margin: 0 20px;
+				}
+
+				.module-img {
+					display: flex;
+					flex-direction: column;
+
+					a {
+						margin: 20px auto 0 auto;
+						background-color: $white;
+						height: 38px;
+						width: 100px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						text-decoration: none;
+					}
+				}
+
+			}
+
+			@include mobile {
+				width: 100%;
+
+				.info-container {
+					flex-direction: column;
+					max-width: 500px;
+					margin: auto;
+
+					.module-img {
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+
+
+		.card {
+			display: flex;
+			align-items: center;
+			max-width: 700px;
+			margin: 20px 0;
+
+			.text {
+				display: none;
+			}
+
+			&.hidden {
+				display: none;
+			}
 
 			img {
 				margin: auto;
 				height: auto;
-		    width: auto; 
+		    width: auto;
+		    max-width: 300px;
 			}
 
 			.info {
 				display: flex;
 				flex-direction: column;
 				margin-left: 30px;
+				height: 200px;
+
+				.study {
+					border-style: none;
+					background-color: $white;
+					width: 100px;
+					min-height: 38px;
+				}
 			}
 
 		}
 
 		@include mobile {
-			padding: 20px;
+			padding: 38px 20px;
 
-			article {
+			.exit-wrapper {
+				button {
+					left: 20px;
+				}
+			}
+			
+			.card {
 				flex-wrap: wrap;
+				justify-content: center;
+				max-width: 300px;
+				width: 88%;
+				margin: 20px;
 				
-				img {
-					max-width: 300px;
-					max-height: 300px;
+				.project-img {
 					width: 100%;
+					img {
+						height: auto;
+						width: 100%;
+					}
 				}
 
 				.info {
+					text-align: center;
 					margin: 0 30px;
-					max-width: 400px;
+					max-height: 200px;
 					
 					h3 {
 						margin: 0;
+					}
+
+					.study {
+						margin: 0 auto;
 					}
 
 				}
@@ -50,9 +162,15 @@
 		}
 
 		@include phablet {
-			padding: 20px;
+			padding: 38px 20px;
 
-			article {
+			.exit-wrapper {
+				button {
+					left: 20px;
+				}
+			}
+
+			.card {
 				img {
 					max-width: 300px;
 					max-height: 300px;

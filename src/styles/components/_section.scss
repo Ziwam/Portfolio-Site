@@ -1,16 +1,59 @@
+@import 'helpers/_variables.scss';
+
 section {
-	background-color: #D7F;
+	padding: 75px 0 35px 0;
 
-	.title {
-		background-color: #FB7;
-		margin: 0;
-		padding: 8px 0 8px 10px;
+	&.box {
+		margin: auto;
+		width: 900px;
 
-		width: 300px;
-
-		@include mobile {
-			width: 45%;
+		@include phablet {
+			width: 95%;
 		}
 
+		@include mobile {
+			width: 100%;
+		}
+	}
+
+	.title {
+		margin: auto;
+		margin-bottom: 10px;
+		width: auto;
+		text-align: center;
+		font-family: $font-head, serif;
+		font-size: 20px;
+
+		// &.pause-anim {
+		// 	visibility: hidden;
+		// }
+
+		// &.in-view{
+		// 	@include animation(
+		// 		'fade-in .6s ease-out 1 normal forwards',
+		// 		'slide-in-left .3s ease-out 1 normal forwards'
+		// 		);
+		// }
+	}
+
+	.break {
+		margin: auto;
+		width: 40px;
+		border-bottom: 2px solid $white;
+	}
+
+	.container {
+		display: flex;
+		justify-content: center;
+
+		// &.pause-anim {
+		// 	visibility: hidden;
+		// }
+	
+		// &.in-view{
+		// 	@include animation(
+		// 		'fade-in 2s ease-out 1 normal forwards'
+		// 		);
+		// }
 	}
 }

@@ -1,9 +1,31 @@
 @import 'helpers/_variables.scss';
 
 header {
-	background-color: #7CF;
 	height: 100vh;
+	max-height: 1000px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-family: $font-head, serif;
+	background-image: linear-gradient( rgba(9, 9, 9,0), rgba(74, 74, 74,1)), url("../assets/office_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	.head-text{
+		.top {
+			display: flex;
+			flex-wrap: nowrap;
+			font-size: 8vw;
+			margin: 0;
+
+		}
+
+		.bottom {
+			font-size: 3vw;
+			margin: 0;
+		}		
+	}
+
 }

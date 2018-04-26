@@ -1,11 +1,16 @@
 @import 'helpers/_mixins.scss';
 
 #skills {
+	background-image: url('../');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+
 	.container {
-		display: flex;
-		justify-content: center;
 		flex-wrap: wrap;
-		padding: 20px 100px;
+		padding: 38px 0;
+		max-width: 900px;
+		margin: auto;
 
 		p {
 			background-color: #fff;
@@ -14,16 +19,15 @@
 		}
 
 		@include mobile {
-			padding: 20px;
+			padding: 38px 20px;
 			p {
 				padding: 10px;
 				margin: 10px;
 			}
-			
 		}
 
 		@include phablet {
-			padding: 20px 70px;
+			padding: 38px 70px;
 			p {
 				padding: 10px;
 				margin: 10px 20px;
