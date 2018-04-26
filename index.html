@@ -8,7 +8,7 @@
 </head>
 <body>
 	<nav class="hidden">
-		<div class="container">
+		<div class="container ">
 			<div class="options">
 				<a href="#about">About</a>
 				<a href="#skills">Skills</a>
@@ -26,23 +26,28 @@
 	<button class="menu">MENU</button>
 	<header>
 		<div class="head-text">
-			<h1 class="top">Front End Developer</h1>
-			<h2 class="bottom">Ziwa Mukungu</h2>
+			<h1 class="top">Ziwa Mukungu</h1>
+			<h2 class="bottom">Front-end Developer</h2>
 		</div>
 	</header>
 	<main>
-		<div class="wrapper">
-			<section id="about">
-				<h3 class="title">About</h3>
+			<section id="about" class="box">
+				<h3 class="title pause-anim">About</h3>
+				<div class="break"></div>
 				<div class="container">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime facere dolores at harum error? Inventore culpa accusamus assumenda rerum minima quos eligendi sint sit architecto possimus, quae, dolorem tempore id necessitatibus alias suscipit distinctio nisi nostrum ea ullam. Nostrum debitis, ullam cumque a, magnam labore sed voluptatibus modi suscipit fuga officia voluptate recusandae quasi eaque dolores adipisci deserunt praesentium minus id repellat necessitatibus autem? Asperiores fugiat quo ab quasi neque, sequi aperiam perspiciatis voluptate corporis, reprehenderit veniam accusantium!</p>
-					<figure>
+					<div class="text">					
+						<p>I am a 21-year-old front-end developer. I was a Unity Game Developer before switching to Front-end Development.</p>
+						<p>I am self-taught and have built personal projects applying all the skills I know. I love to design and build responsive websites and web apps. I fell in love with the multitude of tools and languages that make up the web environment. I am eager to become part of a team and learn new technologies.</p>
+						<p>I am currently looking for opportunities to advance my skills in any capacity. An Internship would be the ideal position for me, as it will allow me to help the company with minor tasks while still allowing myself to grow as a developer.</p>
+					</div>
+					<div class="about-img">
 						<img src="./img/placeholder-image.png" alt="portrait">
-					</figure>
+					</div>
 				</div>
 			</section>
 			<section id="skills">
-				<h3 class="title">Skills</h3>
+				<h3 class="title pause-anim">Skills</h3>
+				<div class="break"></div>
 				<div class="container">
 					<p>HTML</p>
 					<p>CSS</p>
@@ -54,42 +59,89 @@
 					<p>Express</p>
 					<p>MongoDB</p>
 					<p>Photoshop</p>
+					<p>Illustrator</p>
 				</div>
 			</section>
-			<section id="projects">
-				<h3 class="title">Projects</h3>
+			<section id="projects" class="box">
+				<h3 class="title pause-anim">Projects</h3>
+				<div class="break"></div>
 				<div class="container">
-					<article>
-						<figure>
-							<img src="./img/placeholder-image.png" alt="image">
-						</figure>
-						<div class="info">
-							<h3>Project Title</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+					<div class="exit-wrapper hidden">
+						<button class="exit">X</button>
+					</div>
+					<article class="project-module hidden">
+						<h3>Project Title</h3>
+						<div class="info-container">
+							<div class="text"></div>
+							<div class="module-img">
+								<img src="./img/placeholder-image.png" alt="img">
+								<a href="#" class="site">Visit</a>
+							</div>
 						</div>
 					</article>
-					<article>
-						<figure>
+					<article class="card">
+						<div class="project-img">
 							<img src="./img/placeholder-image.png" alt="image">
-						</figure>
+						</div>
 						<div class="info">
-							<h3>Project Title</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+							<h3>Triangle Ice Cream</h3>
+							<p>A web app that lets users view ratings from local ice cream stores in North CArolina's Research Triangle Area.</p>
+							<button class="study">Case Study</button>
+						</div>
+						<div class="text">
+							<h4>Application</h4>
+							<p>Triangle ice cream is a web app built with the React framework. It utilizes APIs to view ice cream stores local to North Carolina's research triangle region.</p>
+							<h4>Goals</h4>
+							<p>Create an app that features a map of ice cream stores around the Research Triangle area. Use Zamoto's API to provide ratings, geolocation coordinates, and menu links for each store. Display the stores using the Google Maps API. Apply a service worker for offline functionalities.</p>
+							<h4>Obstacles</h4>
+							<p>Applying the Google Maps API to an individual react component was the most time-consuming part of the project. I applied an async script loader so I could operate on the callback of the script.</p>
+							<h4>Takeaway</h4>
+							<p>Through this project, I learned how to retrieve and use data from a third-party API and to apply it to another API.</p>
 						</div>
 					</article>
-					<article>
-						<figure>
+					<article class="card">
+						<div class="project-img">
 							<img src="./img/placeholder-image.png" alt="image">
-						</figure>
+						</div>
 						<div class="info">
-							<h3>Project Title</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil accusantium, ab. Est, provident amet.</p>
+							<h3>My Reads</h3>
+							<p>A book tracking web app that lets users organize books from a server-side library.</p>
+							<button class="study">Case Study</button>
+						</div>
+						<div class="text">
+							<h4>Application</h4>
+							<p>My Reads is a book tracker app built using React framework. Users are able to search for books stored in the database and organize than into shelves.</p>
+							<h4>Goals</h4>
+							<p>Create a responsive single-page application that retrieves a collection of books. Allow the user to place the books into shelve categories. Display the books beneath the shelves they are sorted under. The shelves must be another component of the page separate from the library component.</p>
+							<h4>Takeaway</h4>
+							<p>I've learned how switch React components using the react-router plugin and how to persist data between React components.</p>
+						</div>
+					</article>
+					<article class="card">
+						<div class="project-img">
+							<img src="./img/placeholder-image.png" alt="image">
+						</div>
+						<div class="info">
+							<h3>Restaurant Reviews</h3>
+							<p>A responsive web app using a static database to pull restraunt info.</p>
+							<button class="study">Case Study</button>
+						</div>
+						<div class="text">
+							<h4>Application</h4>
+							<p>Restaurant Reviews is a responsive website able to scale for any device. It is a personal project to test my skills in responsive design.</p>
+							<h4>Goals</h4>
+							<p>Create a mobile-ready web application that adheres to the W3C Accessibility standards. The app must be able to deliver requested assets for offline use.</p>
+							<h4>Takeaway</h4>
+							<p>My greatest takeaway from this project was implementing various media breakpoints for keeping fonts and content scalable as device resolution changed. I also learned the methods of caching asset requests for offline use.
+							</p>
 						</div>
 					</article>
 				</div>
 			</section>
-			<section id="contact">
-				<h3 class="title">Contact</h3>
+			<section id="map"></section>
+			<section id="contact" class="box">
+				<h3 class="title pause-anim">Contact</h3>
+				<div class="break"></div>
 				<div class="container">
 					<form action="https://mailthis.to/ziwam" method="POST" encType="multipart/form-data">
 						<label for="name">Name</label>
@@ -104,7 +156,6 @@
 					</form>
 				</div>
 			</section>
-		</div>
 	</main>
 	<footer>
 		copyright 2018
