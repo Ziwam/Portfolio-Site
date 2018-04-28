@@ -1,4 +1,8 @@
 import "./styles/app.scss";
+import fb from "./assets/fb.svg";
+import ig from "./assets/ig.svg";
+import li from "./assets/li.svg";
+import tw from "./assets/tw.svg";
 import $ from "jquery";
 
 const $elems = $('.pause-anim');
@@ -10,6 +14,11 @@ const $moduleTitle = $module.find('h3');
 const $moduleImg = $module.find('img');
 const $exit_btn = $('.exit-wrapper');
 const viewOffset = 90;
+
+$('.facebook_icon').attr('src',fb);
+$('.instagram_icon').attr('src',ig);
+$('.linkedin_icon').attr('src',li);
+$('.twitter_icon').attr('src',tw);
 
 
 let window_height = $window.height();

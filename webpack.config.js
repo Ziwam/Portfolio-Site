@@ -21,7 +21,7 @@ module.exports = {
     // Add loader
     rules: [
     	{
-			  test: /\.(otf|ttf|eot|woff|woff2|jpg|png)$/,
+			  test: /\.(otf|ttf|eot|woff|woff2|jpg|png|svg)$/,
 			    loader: 'url-loader',
 			    options: {
 			      name: 'public/fonts/[name].[ext]',

@@ -1,9 +1,13 @@
-@import 'helpers/_variables.scss';
 @import 'helpers/_mixins.scss';
 
 @font-face {
   font-family: "Lovelo-Black";
   src: url("../assets/Lovelo-Black.otf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/Montserrat-Light.otf");
 }
 
 body {
