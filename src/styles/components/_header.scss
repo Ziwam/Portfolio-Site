@@ -20,15 +20,28 @@ header {
 		max-width: 900px;
 
 		.container {
+			position: relative;
 			padding: 0 30px;
 
 			.top {
-				font-size: 8vw;
+				position: relative;
+				font-size: 4em;
 				margin: 0;
+				z-index: 1;
+
+				.box {
+					background: linear-gradient(135deg, rgba(0, 199, 182,.7) 50%, rgba(0, 94, 114,.7) 100% );
+					position: absolute;
+					width: 270px;
+					height: 55px;
+					top: -13px;
+					left: -20px;
+					z-index: -1;
+				}
 			}
 
 			.bottom {
-				font-size: 3vw;
+				font-size: 1.3em;
 				margin: 0;
 			}				
 		}
@@ -36,6 +49,20 @@ header {
 
 		@include mobile {
 			width: 100%;
+			padding-left: 30px;
+			.container {
+				padding: 0 20px;
+				.top {
+					font-size: 3em;
+					.box {
+						width: 4.3em;
+						height: 1em;
+					}
+				}
+				.bottom {
+					font-size: 1em;
+				}
+			}
 		}
 
 		@include phablet {

@@ -12,7 +12,7 @@
 
 body {
 	margin: 0;
-	background: linear-gradient(-9deg, rgb(22, 22, 22), rgb(74, 74, 74));
+	background: linear-gradient(165deg, rgb(25, 25, 25), rgb(22, 22, 22));
 
 	.menu {
 		display: none;
@@ -28,7 +28,8 @@ body {
 			right: 0;
 			z-index: 2;
 			border-style: none;
-			background-color: $gray;
+			background-color: $black;
+			color: $white;
 		}
 	}
 }

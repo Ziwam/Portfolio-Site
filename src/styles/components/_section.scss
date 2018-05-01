@@ -1,29 +1,29 @@
 @import 'helpers/_variables.scss';
 
 section {
+	position: relative;
 	padding: 75px 0 35px 0;
+	margin: auto;
+	width: 900px;
 
-	&.box {
-		margin: auto;
-		width: 900px;
+	@include phablet {
+		width: 95%;
+	}
 
-		@include phablet {
-			width: 95%;
-		}
-
-		@include mobile {
-			width: 100%;
-		}
+	@include mobile {
+		width: 100%;
 	}
 
 	.title {
+		position: relative;
 		margin: auto;
 		margin-bottom: 10px;
+		margin-left: 50px;
 		width: auto;
-		text-align: center;
 		font-family: $font-head, serif;
 		color: $white;
-		font-size: 20px;
+		font-size: 2.3em;
+		z-index: 0;
 
 		// &.pause-anim {
 		// 	visibility: hidden;
@@ -35,12 +35,16 @@ section {
 		// 		'slide-in-left .3s ease-out 1 normal forwards'
 		// 		);
 		// }
-	}
 
-	.break {
-		margin: auto;
-		width: 40px;
-		border-bottom: 2px solid $white;
+		.box {
+			background: linear-gradient(135deg, rgba(0, 199, 182,.7) 50%, rgba(0, 94, 114,.7) 100%);
+			position: absolute;
+			width: 100px;
+			height: 27px;
+			top: 22px;
+			left: 40px;
+			z-index: -1;
+		}
 	}
 
 	.container {

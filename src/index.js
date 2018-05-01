@@ -3,6 +3,7 @@ import fb from "./assets/fb.svg";
 import ig from "./assets/ig.svg";
 import li from "./assets/li.svg";
 import tw from "./assets/tw.svg";
+import pic from "./assets/self_portrait.jpg";
 import $ from "jquery";
 
 const $elems = $('.pause-anim');
@@ -19,6 +20,7 @@ $('.facebook_icon').attr('src',fb);
 $('.instagram_icon').attr('src',ig);
 $('.linkedin_icon').attr('src',li);
 $('.twitter_icon').attr('src',tw);
+$('.portrait').attr('src',pic);
 
 
 let window_height = $window.height();
