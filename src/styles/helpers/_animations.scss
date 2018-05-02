@@ -30,3 +30,53 @@
 		transform: translate(0,0);
 	}
 }
+
+@include keyframe(slide-in-up) {
+	0% {
+		transform: translate(0,15px);
+	}
+
+	100% {
+		transform: translate(0,0);
+	}
+}
+
+@include keyframe(slide-in-down) {
+	0% {
+		transform: translate(0,-15px);
+	}
+
+	100% {
+		transform: translate(0,0);
+	}
+}
+
+@include keyframe(anim-shadow) {
+	0% {
+		box-shadow: -.1px .1px .1px .1px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+
+	}
+}
+
+@include keyframe(grow-skill) {
+	0% {
+		transform: scale(0.92);
+	}
+
+	100% {
+
+	}
+}
+
+@include keyframe(grow-card) {
+	0% {
+		transform: scale(0.98);
+	}
+
+	100% {
+
+	}
+}

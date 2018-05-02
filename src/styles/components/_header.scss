@@ -23,6 +23,24 @@ header {
 			position: relative;
 			padding: 0 30px;
 
+			// &.pause-anim {
+			// 	visibility: hidden;
+			// }
+
+			// &.in-view{
+			// 	@include animation(
+			// 		'fade-in .6s ease-out 1 normal forwards',
+			// 		'slide-in-left .5s ease-out 1 normal forwards'
+			// 	);
+
+			// 	.box {
+			// 		@include animation(
+			// 			'fade-in .6s ease-out 1 normal forwards',
+			// 			'slide-in-right .5s ease-out 1 normal forwards'
+			// 		);
+			// 	}
+			// }
+
 			.top {
 				position: relative;
 				font-size: 4em;
@@ -38,11 +56,39 @@ header {
 					left: -20px;
 					z-index: -1;
 				}
+
+				&.pause-anim {
+					visibility: hidden;
+				}
+
+				&.in-view {
+					@include animation(
+						'fade-in .6s .2s ease-out 1 normal backwards',
+						'slide-in-left .5s .2s ease-out 1 normal backwards'
+					);
+
+					.box {
+						@include animation(
+							'slide-in-right .5s .2s ease-out 1 normal backwards'
+						);
+					}
+				}
 			}
 
 			.bottom {
 				font-size: 1.3em;
 				margin: 0;
+
+				&.pause-anim {
+					visibility: hidden;
+				}
+
+				&.in-view {
+					@include animation(
+						'fade-in .6s .7s ease-out 1 normal backwards',
+						'slide-in-left .5s .7s ease-out 1 normal backwards'
+					);
+				}
 			}				
 		}
 

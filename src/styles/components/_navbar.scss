@@ -26,11 +26,18 @@ nav {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				box-sizing: border-box;
 				height: 100%;
 				width: 100px;
 				text-decoration: none;
 				color: $white;
 				font-family: $font-head;
+				font-size: .8em;
+				transition: .3s ease;
+
+				&:hover {
+					background-color: rgba(255,255,255,.1);
+				}
 			}
 		}
 
@@ -50,6 +57,11 @@ nav {
 				img {
 					height: 32px;
 					width: 32px;
+					transition: .3s ease;
+
+					&:hover {
+						transform: scale(1.2);
+					}
 				}
 			}
 		}
@@ -84,7 +96,11 @@ nav {
 @include mobile {
 
 	nav.hidden {
-		display: none;
+		height: 0%;
+		.container {
+			display: none;
+		}
+		opacity: .3;
 	}
 
 	nav {
@@ -93,6 +109,7 @@ nav {
 		height: 100%;
 		width: 100%;
 		top: 0;
+		transition: .3s ease;
 
 		.container {
 			display: flex;
@@ -114,7 +131,17 @@ nav {
 					max-width: 200px;
 					border-bottom: 1px solid;
 					border-image: linear-gradient(135deg, rgba(0, 199, 182,.7) 50%, rgba(0, 94, 114,.7) 100%) 100;
+				
+					&:hover {
+						background-color: transparent;
+						transform: scale(1.15);
+					}
 				}
+
+				@include animation(
+					'fade-in .6s .3s ease-out 1 normal backwards',
+					'slide-in-down .5s .3s ease-out 1 normal backwards'
+				);
 			}
 
 			.icons {
@@ -127,6 +154,11 @@ nav {
 						width: 36px;
 					}
 				}
+
+				@include animation(
+					'fade-in .6s .5s ease-out 1 normal backwards',
+					'slide-in-down .5s .5s ease-out 1 normal backwards'
+				);
 			}
 		}
 	}

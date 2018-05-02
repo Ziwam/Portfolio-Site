@@ -12,6 +12,17 @@
 			color: $white;
 			font-family: $font-head;
 
+			&.pause-anim {
+				visibility: hidden;
+			}
+
+			&.in-view {
+				@include animation(
+					'fade-in .6s .3s ease-out 1 normal backwards',
+					'slide-in-up .5s .3s ease-out 1 normal backwards'
+				);
+			}
+
 			.entry {
 				height: 40px;
 				background-color: transparent;

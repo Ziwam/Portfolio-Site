@@ -14,6 +14,8 @@ const $moduleText = $module.find('.text');
 const $moduleTitle = $module.find('h3');
 const $moduleImg = $module.find('img');
 const $exit_btn = $('.exit-wrapper');
+const $menu = $('.menu');
+const $nav_bar = $('nav')
 const viewOffset = 90;
 
 $('.facebook_icon').attr('src',fb);
@@ -22,16 +24,15 @@ $('.linkedin_icon').attr('src',li);
 $('.twitter_icon').attr('src',tw);
 $('.portrait').attr('src',pic);
 
-
 let window_height = $window.height();
 
-$('.menu').click(()=>{
-	$('nav').toggleClass('hidden');
+$menu.click(()=>{
+	$nav_bar.toggleClass('hidden');
+	$menu.toggleClass('active');
 });
 
 $('.study').click((evn)=>{
 	show_projct_module(evn);
-
 })
 
 $exit_btn.click(()=>{
@@ -40,6 +41,14 @@ $exit_btn.click(()=>{
 
 $window.on('scroll', check_if_in_view);
 $window.on('resize', () => {window_height = $window.height();});
+
+$('.options a').on("click", function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+        scrollTop: $(this.getAttribute("href")).offset().top
+    }, 1000);
+    reset_nav_bar();
+});
 
 function check_if_in_view() {
 
@@ -75,8 +84,12 @@ function show_projct_cards(evn) {
 	$moduleText.empty();
 	$exit_btn.toggleClass('hidden');
 
-
 	for(let card of $cards){
 		card.classList.toggle('hidden');
 	}
+}
+
+function reset_nav_bar() {
+	$nav_bar.addClass('hidden');
+	$menu.removeClass('active');
 }

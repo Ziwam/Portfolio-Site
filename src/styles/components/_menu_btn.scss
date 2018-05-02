@@ -1,0 +1,45 @@
+.menu {
+	display: none;
+}
+	
+@include mobile {
+	.menu {
+		display: block;
+		position: fixed;
+		height: auto;
+		width: auto;
+		margin: 10px;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		border-style: none;
+		background-color: transparent;
+		&:focus {
+			outline: none;
+		}
+
+		.line {
+			width: 40px;
+			height: 5px;
+			background: linear-gradient(135deg, rgb(0, 199, 182) 0%, rgb(0, 94, 114) 100%);
+			margin: 8px auto;
+			box-shadow: -2px 4px 4px 1px rgba(0, 0, 0, .15);
+			transition: .3s ease;
+		}
+
+		&.active {
+			.line:nth-child(1) {
+				transform: translateY(14px) rotate(45deg);
+				box-shadow: none;
+			}
+			.line:nth-child(2) {
+				opacity: 0;
+				transform: scaleX(0);
+			}
+			.line:nth-child(3) {
+				transform: translateY(-14px) rotate(-45deg);
+				box-shadow: none;
+			}
+		}
+	}
+}

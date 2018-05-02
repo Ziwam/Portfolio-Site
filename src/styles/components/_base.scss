@@ -13,23 +13,4 @@
 body {
 	margin: 0;
 	background: linear-gradient(165deg, rgb(25, 25, 25), rgb(22, 22, 22));
-
-	.menu {
-		display: none;
-	}
-	
-	@include mobile {
-		.menu {
-			display: block;
-			position: fixed;
-			height: 50px;
-			width: 50px;
-			top: 0;
-			right: 0;
-			z-index: 2;
-			border-style: none;
-			background-color: $black;
-			color: $white;
-		}
-	}
 }

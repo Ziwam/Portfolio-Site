@@ -39,19 +39,19 @@
 
 //Scalability
 @mixin mobile {
-	@media (max-width: #{$phablet - 1px;}) {
+	@media (max-width: #{$phablet}) {
 		@content;
 	}
 }
 
 @mixin phablet {
-	@media (min-width: #{$phablet}) and (max-width: #{$tablet - 1px;}) {
+	@media (min-width: #{$phablet}) and (max-width: #{$tablet}) {
 		@content;
 	}
 }
 
 @mixin tablet {
-	@media (min-width: #{$tablet}) and (max-width: #{$laptop - 1px;}) {
+	@media (min-width: #{$tablet}) and (max-width: #{$laptop}) {
 		@content;
 	}
 }

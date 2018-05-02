@@ -15,7 +15,19 @@
 				max-width: 230px;
 		    border-bottom: 5px solid;
 		    border-image: linear-gradient(135deg, rgba(0, 199, 182,.9) 50%, rgba(0, 94, 114,.9) 100%) 100;
-		  }			
+		  }
+
+		  &.pause-anim {
+				visibility: hidden;
+			}
+
+			&.in-view {
+				@include animation(
+					'anim-shadow .8s .7s ease-out 1 normal backwards',
+					'grow-card .8s .7s ease-out 1 normal backwards',
+					'fade-in .5s .3s ease-out 1 normal backwards'
+				);
+			}
 		}
 
 		.text {
@@ -24,6 +36,17 @@
 			font-family: $font-text;
 			border-left: 1px solid $silver;
 			line-height: 1.6;
+
+			&.pause-anim {
+				visibility: hidden;
+			}
+
+			&.in-view {
+				@include animation(
+					'fade-in .5s .3s ease-out 1 normal backwards',
+					'slide-in-up .4s .3s ease-out 1 normal backwards'
+				);
+			}
 		}
 
 		@include mobile {
