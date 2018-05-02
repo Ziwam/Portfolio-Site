@@ -13,4 +13,9 @@
 body {
 	margin: 0;
 	background: linear-gradient(165deg, rgb(25, 25, 25), rgb(22, 22, 22));
+
+	&.behind {
+		height: 100%;
+		overflow: hidden;
+	}
 }

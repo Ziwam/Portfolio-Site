@@ -6,6 +6,7 @@ import tw from "./assets/tw.svg";
 import pic from "./assets/self_portrait.jpg";
 import $ from "jquery";
 
+const $body = $('body');
 const $elems = $('.pause-anim');
 const $cards = $('.card');
 const $window = $(window);
@@ -15,7 +16,7 @@ const $moduleTitle = $module.find('h3');
 const $moduleImg = $module.find('img');
 const $exit_btn = $('.exit-wrapper');
 const $menu = $('.menu');
-const $nav_bar = $('nav')
+const $nav_bar = $('nav');
 const viewOffset = 90;
 
 $('.facebook_icon').attr('src',fb);
@@ -27,17 +28,18 @@ $('.portrait').attr('src',pic);
 let window_height = $window.height();
 
 $menu.click(()=>{
+	$body.toggleClass('behind');
 	$nav_bar.toggleClass('hidden');
 	$menu.toggleClass('active');
 });
 
 $('.study').click((evn)=>{
 	show_projct_module(evn);
-})
+});
 
 $exit_btn.click(()=>{
 	show_projct_cards();
-})
+});
 
 $window.on('scroll', check_if_in_view);
 $window.on('resize', () => {window_height = $window.height();});
@@ -49,6 +51,12 @@ $('.options a').on("click", function(e) {
     }, 1000);
     reset_nav_bar();
 });
+
+$('.study').on("click", function() {
+	$('html, body').animate({
+        scrollTop: $('#projects').offset().top
+    }, 270);
+})
 
 function check_if_in_view() {
 
@@ -92,4 +100,5 @@ function show_projct_cards(evn) {
 function reset_nav_bar() {
 	$nav_bar.addClass('hidden');
 	$menu.removeClass('active');
+	$body.removeClass('behind');
 }
