@@ -79,18 +79,24 @@
 					display: flex;
 					flex-direction: column;
 
-					a {
-						margin: 20px auto 0 auto;
-						background: linear-gradient(135deg, rgba(0, 199, 182,.7) 50%, rgba(0, 94, 114,.7) 100% );
-						height: 38px;
-						width: 100px;
+					.links{
 						display: flex;
-						justify-content: center;
-						align-items: center;
-						text-decoration: none;
-						color: $white;
-						font-family: $font-text;
+						justify-content: space-around;
+						
+						a {
+							margin: 20px 0 0 0;
+							background: linear-gradient(135deg, rgba(0, 199, 182,.7) 50%, rgba(0, 94, 114,.7) 100% );
+							height: 38px;
+							width: 100px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							text-decoration: none;
+							color: $white;
+							font-family: $font-text;
+						}
 					}
+
 				}
 				@include animation(
 					'slide-in-up .8s .5s ease 1 normal backwards',
@@ -148,11 +154,7 @@
 				font-family: $font-text;
 			}
 
-			.text {
-				display: none;
-			}
-
-			&.hidden {
+			.text, &.hidden, a {
 				display: none;
 			}
 
@@ -199,10 +201,8 @@
 					color: $white;
 					font-family: $font-text;
 					margin: 0 auto;
-
 				}
 			}
-
 		}
 
 		@include mobile {

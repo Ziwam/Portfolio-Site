@@ -14,6 +14,8 @@ const $module = $('.project-module');
 const $moduleText = $module.find('.text');
 const $moduleTitle = $module.find('h3');
 const $moduleImg = $module.find('img');
+const $moduleLink = $('#project_demo');
+const $moduleCode = $('#project_code');
 const $exit_btn = $('.exit-wrapper');
 const $menu = $('.menu');
 const $nav_bar = $('nav');
@@ -33,8 +35,8 @@ $menu.click(()=>{
 	$menu.toggleClass('active');
 });
 
-$('.study').click((evn)=>{
-	show_projct_module(evn);
+$('.study').click(function(){
+	show_projct_module(this);
 });
 
 $exit_btn.click(()=>{
@@ -72,15 +74,23 @@ function check_if_in_view() {
   }
 }
 
-function show_projct_module(evn) {
+function show_projct_module(domNode) {
+	const $node = $(domNode);
 	$module.toggleClass('hidden');
 	$exit_btn.toggleClass('hidden');
-	let text = $(evn.target).parent().next('.text').html();
-	let title = $(evn.target).siblings('h3').html();
-	let img_src = $(evn.target).parent().siblings('.project-img').children('img').attr('src');
+
+	let text = $node.parent().next('.text').html();
+	let link = $node.parent().siblings('.demo').attr('href');
+	let code = $node.parent().siblings('.code').attr('href');
+	let title = $node.siblings('h3').html();
+	let img_src = $node.parent().siblings('.project-img').children('img').attr('src');
 	$moduleText.html(text);
 	$moduleTitle.html(title);
 	$moduleImg.attr('src',img_src);
+	console.log(link,code);
+	$moduleLink.attr('href',link);
+	$moduleCode.attr('href',code);
+
 
 	for(let card of $cards){
 		card.classList.toggle('hidden');
