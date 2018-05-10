@@ -14,8 +14,9 @@ const $module = $('.project-module');
 const $moduleText = $module.find('.text');
 const $moduleTitle = $module.find('h3');
 const $moduleImg = $module.find('img');
-const $moduleLink = $('#project_demo');
-const $moduleCode = $('#project_code');
+const $moduleLink = $module.find('#project_demo');
+const $moduleCode = $module.find('#project_code');
+const $moduleTools = $module.find('.tools');
 const $exit_btn = $('.exit-wrapper');
 const $menu = $('.menu');
 const $nav_bar = $('nav');
@@ -82,6 +83,7 @@ function show_projct_module(domNode) {
 	let text = $node.parent().next('.text').html();
 	let link = $node.parent().siblings('.demo').attr('href');
 	let code = $node.parent().siblings('.code').attr('href');
+	let tools = $node.parent().siblings('.tools').html();
 	let title = $node.siblings('h3').html();
 	let img_src = $node.parent().siblings('.project-img').children('img').attr('src');
 	$moduleText.html(text);
@@ -90,6 +92,7 @@ function show_projct_module(domNode) {
 	console.log(link,code);
 	$moduleLink.attr('href',link);
 	$moduleCode.attr('href',code);
+	$moduleTools.html(tools);
 
 
 	for(let card of $cards){
