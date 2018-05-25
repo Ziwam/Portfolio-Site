@@ -2,7 +2,7 @@ import "./styles/app.scss";
 import fb from "./assets/fb.svg";
 import ig from "./assets/ig.svg";
 import li from "./assets/li.svg";
-import tw from "./assets/tw.svg";
+import gh from "./assets/gh.svg";
 import pic from "./assets/self_portrait.jpg";
 import $ from "jquery";
 
@@ -25,7 +25,7 @@ const viewOffset = 90;
 $('.facebook_icon').attr('src',fb);
 $('.instagram_icon').attr('src',ig);
 $('.linkedin_icon').attr('src',li);
-$('.twitter_icon').attr('src',tw);
+$('.github_icon').attr('src',gh);
 $('.portrait').attr('src',pic);
 
 let window_height = $window.height();
