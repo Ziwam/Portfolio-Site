@@ -21,13 +21,13 @@ module.exports = {
     // Add loader
     rules: [
     	{
-			  test: /\.(otf|ttf|eot|woff|woff2|jpg|png|svg)$/,
+				test: /\.(otf|ttf|eot|woff|woff2|jpg|png|svg)$/,
 			    loader: 'url-loader',
 			    options: {
-			      name: 'public/fonts/[name].[ext]',
+			      name: '/assets/[name].[ext]',
 			      limit: 25000
 			    },
-			},
+		},
 	    {
 	      test: /\.js$/,
 	      exclude: /(node_modules|bower_components)/,
@@ -38,8 +38,14 @@ module.exports = {
 	    {
 	    	test:/\.scss$/,
 	  		use: [{
-	                loader: "style-loader" // creates style nodes from JS strings
-	            }, {
+					loader: 'file-loader',
+					options: {
+						name: '[name].css',
+						outputPath: 'assets/css/'
+					}
+				}, {
+					loader: 'extract-loader'
+				}, {
 	                loader: "css-loader" // translates CSS into CommonJS
 	            }, {
 	                loader: "sass-loader" // compiles Sass to CSS

@@ -155,8 +155,8 @@
 
 			&.in-view {
 				@include animation(
-					'anim-shadow .8s .7s ease 1 normal backwards',
-					'grow-card .8s .7s ease 1 normal backwards',
+					'anim-shadow .8s .3s ease 1 normal backwards',
+					'grow-card .8s .3s ease 1 normal backwards',
 					'fade-in .5s .3s ease 1 normal backwards'
 				);
 			}
