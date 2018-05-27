@@ -17,10 +17,13 @@ const $moduleImg = $module.find('img');
 const $moduleLink = $module.find('#project_demo');
 const $moduleCode = $module.find('#project_code');
 const $moduleTools = $module.find('.tools');
+const $moduleToggle = $module.find('.toggle');
 const $exit_btn = $('.exit-wrapper');
 const $menu = $('.menu');
 const $nav_bar = $('nav');
 const viewOffset = 90;
+
+let projectImages = [];
 
 $('.facebook_icon').attr('src',fb);
 $('.instagram_icon').attr('src',ig);
@@ -47,6 +50,7 @@ $exit_btn.click(()=>{
 $window.on('scroll', check_if_in_view);
 $window.on('resize', () => {window_height = $window.height();});
 
+//EventListeners
 $('.options a').on("click", function(e) {
 	e.preventDefault();
 	$('html, body').animate({
@@ -59,6 +63,15 @@ $('.study').on("click", function() {
 	$('html, body').animate({
         scrollTop: $('#projects').offset().top
     }, 270);
+})
+
+$('#tog_desktop').on("change", function(e) {
+	$moduleImg.attr('src',projectImages[0].getAttribute('src'));
+	$moduleImg.toggleClass("mobile_view");
+})
+$('#tog_mobile').on("change", function(e) {
+	$moduleImg.attr('src',projectImages[1].getAttribute('src'));
+	$moduleImg.toggleClass("mobile_view");
 })
 
 function check_if_in_view() {
@@ -86,10 +99,13 @@ function show_projct_module(domNode) {
 	let tools = $node.parent().siblings('.tools').html();
 	let title = $node.siblings('h3').html();
 	let img_src = $node.parent().siblings('.project-img').children('img').attr('src');
+	projectImages = $node.parent().siblings('.project-img').children('img');
+	if(projectImages.length === 1){
+		$moduleToggle.toggleClass("hidden");
+	}
 	$moduleText.html(text);
 	$moduleTitle.html(title);
 	$moduleImg.attr('src',img_src);
-	console.log(link,code);
 	$moduleLink.attr('href',link);
 	$moduleCode.attr('href',code);
 	$moduleTools.html(tools);

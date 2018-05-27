@@ -8,7 +8,9 @@
 		.about-img{
 			margin: auto;
 			margin-left: 50px;
-			box-shadow: -9px 15px 15px 2px rgba(0, 0, 0, .25);
+			display: flex;
+			flex-direction: column;
+
 			img {
 				margin: auto;
 				height: auto; 
@@ -16,9 +18,10 @@
 				max-width: 170px;
 			    border-bottom: 5px solid;
 			    border-image: linear-gradient(135deg, rgba(0, 199, 182,.9) 50%, rgba(0, 94, 114,.9) 100%) 100;
+				box-shadow: -9px 15px 15px 2px rgba(0, 0, 0, .25);
 		  	}
 
-		  &.pause-anim {
+		  	&.pause-anim {
 				visibility: hidden;
 			}
 
@@ -28,6 +31,19 @@
 					'grow-card .8s .7s ease-out 1 normal backwards',
 					'fade-in .5s .3s ease-out 1 normal backwards'
 				);
+			}
+
+			.resume {
+				border: 2px solid;
+				border-image: linear-gradient(135deg, rgba(0, 199, 182,.7) 50%, rgba(0, 94, 114,.7) 100%) 1;
+				background-color: transparent;
+				color: rgb(0, 199, 182);
+				padding: 3px 25px;
+				text-decoration: none;
+				font-family: $font-text;
+				margin: 0 auto;
+				margin-top: 10px;
+				font-size: .8em;
 			}
 		}
 

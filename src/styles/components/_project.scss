@@ -81,6 +81,50 @@
 					color: $white;
 					font-family: $font-text;
 
+					img {
+						height: auto;
+						max-width: 300px;
+						margin: auto;
+
+						&.mobile_view {
+							max-width: 200px;
+							padding: 0 50px;
+						}
+					}
+
+					.toggle {
+						display: flex;
+						justify-content: space-around;
+						align-items: flex-end;
+						margin: 20px auto 0;
+						background: #282827;
+						list-style: none;
+						height: auto;
+						width: 70%;
+						max-width: 300px;
+						font-family: $font-text;
+
+						input {
+							display: none;
+						}
+
+						label {
+							display: flex;
+							align-items: center;
+							height: 35px;
+							opacity: 0.3;
+							color: #fff;
+							cursor: pointer;
+							padding: 0 8px;
+							font-size: 13px;
+						}
+
+						input[type="radio"]:checked+label {
+							opacity: 1;
+						}
+
+					}
+
 					.links{
 						display: flex;
 						justify-content: space-around;
@@ -131,6 +175,11 @@
 						img {
 							width: 100%;
 							height: auto;
+
+							&.mobile_view {
+								max-width: 170px;
+								padding: 0;
+							}
 						}
 						.tools {
 							font-size: 100%;
@@ -158,9 +207,9 @@
 
 			&.in-view {
 				@include animation(
-					'anim-shadow .8s .3s ease 1 normal backwards',
-					'grow-card .8s .3s ease 1 normal backwards',
-					'fade-in .5s .3s ease 1 normal backwards'
+					'anim-shadow .8s .1s ease 1 normal backwards',
+					'grow-card .8s .1s ease 1 normal backwards',
+					'fade-in .5s .1s ease 1 normal backwards'
 				);
 			}
 
@@ -187,6 +236,10 @@
 					width: 100%;
 					margin: auto;
 				   max-width: 300px;
+
+				   &.mobile-img {
+				   	display: none;
+				   }
 				}
 			}
 
@@ -200,17 +253,19 @@
 				margin: 0;
 				height: auto;
 				position: relative;
-				background: linear-gradient(180deg, rgba(25, 25, 25,0)0%, rgba(25, 25, 25,1)50%);
+				background: linear-gradient(180deg, rgba(25, 25, 25,0)0%, rgba(25, 25, 25,.8)15%, rgba(25, 25, 25,1)50%, rgba(25, 25, 25,0)70%);
 				top: -20%;
 				margin-bottom: -20%;
 
 				h3 {
 					margin: 0;
 					margin-top: 10px;
-					font-size: .9em;
+					font-size: 1.2em;
+					padding-top: 13px;
 				}
 				p {
 					font-size: 77%;
+					margin-top: 5px;
 				}
 
 				.study {
