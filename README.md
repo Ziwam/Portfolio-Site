@@ -5,5 +5,6 @@ View my portfolio: https://ziwam.github.io/
 Includes:
 - [Sass](https://sass-lang.com/)
 - [jQuery](https://jquery.com/)
+- [Webpack](https://webpack.js.org/)
 ## License
 Copyright (c) 2018 Ziwa Mukungu zmukungu@gmail.com
