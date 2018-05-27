@@ -287,14 +287,16 @@ section {
   #about .container .about-img {
     margin: auto;
     margin-left: 50px;
-    box-shadow: -9px 15px 15px 2px rgba(0, 0, 0, 0.25); }
+    display: flex;
+    flex-direction: column; }
     #about .container .about-img img {
       margin: auto;
       height: auto;
       width: auto;
       max-width: 170px;
       border-bottom: 5px solid;
-      border-image: linear-gradient(135deg, rgba(0, 199, 182, 0.9) 50%, rgba(0, 94, 114, 0.9) 100%) 100; }
+      border-image: linear-gradient(135deg, rgba(0, 199, 182, 0.9) 50%, rgba(0, 94, 114, 0.9) 100%) 100;
+      box-shadow: -9px 15px 15px 2px rgba(0, 0, 0, 0.25); }
     #about .container .about-img.pause-anim {
       visibility: hidden; }
     #about .container .about-img.in-view {
@@ -302,6 +304,17 @@ section {
       -moz-animation: anim-shadow .8s .7s ease-out 1 normal backwards, grow-card .8s .7s ease-out 1 normal backwards, fade-in .5s .3s ease-out 1 normal backwards;
       -o-animation: anim-shadow .8s .7s ease-out 1 normal backwards, grow-card .8s .7s ease-out 1 normal backwards, fade-in .5s .3s ease-out 1 normal backwards;
       animation: anim-shadow .8s .7s ease-out 1 normal backwards, grow-card .8s .7s ease-out 1 normal backwards, fade-in .5s .3s ease-out 1 normal backwards; }
+    #about .container .about-img .resume {
+      border: 2px solid;
+      border-image: linear-gradient(135deg, rgba(0, 199, 182, 0.7) 50%, rgba(0, 94, 114, 0.7) 100%) 1;
+      background-color: transparent;
+      color: #00c7b6;
+      padding: 3px 25px;
+      text-decoration: none;
+      font-family: "Montserrat";
+      margin: 0 auto;
+      margin-top: 10px;
+      font-size: .8em; }
   #about .container .text {
     padding: 0 20px;
     color: #F7F7F7;
@@ -446,6 +459,37 @@ section {
         flex-direction: column;
         color: #F7F7F7;
         font-family: "Montserrat"; }
+        #projects .container .project-module .info-container .module-img img {
+          height: auto;
+          max-width: 300px;
+          margin: auto; }
+          #projects .container .project-module .info-container .module-img img.mobile_view {
+            max-width: 200px;
+            padding: 0 50px; }
+        #projects .container .project-module .info-container .module-img .toggle {
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-end;
+          margin: 20px auto 0;
+          background: #282827;
+          list-style: none;
+          height: auto;
+          width: 70%;
+          max-width: 300px;
+          font-family: "Montserrat"; }
+          #projects .container .project-module .info-container .module-img .toggle input {
+            display: none; }
+          #projects .container .project-module .info-container .module-img .toggle label {
+            display: flex;
+            align-items: center;
+            height: 35px;
+            opacity: 0.3;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 8px;
+            font-size: 13px; }
+          #projects .container .project-module .info-container .module-img .toggle input[type="radio"]:checked + label {
+            opacity: 1; }
         #projects .container .project-module .info-container .module-img .links {
           display: flex;
           justify-content: space-around; }
@@ -480,6 +524,9 @@ section {
             #projects .container .project-module .info-container .module-img img {
               width: 100%;
               height: auto; }
+              #projects .container .project-module .info-container .module-img img.mobile_view {
+                max-width: 170px;
+                padding: 0; }
             #projects .container .project-module .info-container .module-img .tools {
               font-size: 100%; } }
   #projects .container .card {
@@ -496,10 +543,10 @@ section {
     #projects .container .card.pause-anim {
       visibility: hidden; }
     #projects .container .card.in-view {
-      -webkit-animation: anim-shadow .8s .3s ease 1 normal backwards, grow-card .8s .3s ease 1 normal backwards, fade-in .5s .3s ease 1 normal backwards;
-      -moz-animation: anim-shadow .8s .3s ease 1 normal backwards, grow-card .8s .3s ease 1 normal backwards, fade-in .5s .3s ease 1 normal backwards;
-      -o-animation: anim-shadow .8s .3s ease 1 normal backwards, grow-card .8s .3s ease 1 normal backwards, fade-in .5s .3s ease 1 normal backwards;
-      animation: anim-shadow .8s .3s ease 1 normal backwards, grow-card .8s .3s ease 1 normal backwards, fade-in .5s .3s ease 1 normal backwards; }
+      -webkit-animation: anim-shadow .8s .1s ease 1 normal backwards, grow-card .8s .1s ease 1 normal backwards, fade-in .5s .1s ease 1 normal backwards;
+      -moz-animation: anim-shadow .8s .1s ease 1 normal backwards, grow-card .8s .1s ease 1 normal backwards, fade-in .5s .1s ease 1 normal backwards;
+      -o-animation: anim-shadow .8s .1s ease 1 normal backwards, grow-card .8s .1s ease 1 normal backwards, fade-in .5s .1s ease 1 normal backwards;
+      animation: anim-shadow .8s .1s ease 1 normal backwards, grow-card .8s .1s ease 1 normal backwards, fade-in .5s .1s ease 1 normal backwards; }
     #projects .container .card h3 {
       font-family: "Montserrat"; }
     #projects .container .card .text, #projects .container .card.hidden, #projects .container .card a, #projects .container .card .tools {
@@ -517,6 +564,8 @@ section {
         width: 100%;
         margin: auto;
         max-width: 300px; }
+        #projects .container .card .project-img img.mobile-img {
+          display: none; }
     #projects .container .card .info {
       display: flex;
       flex-direction: column;
@@ -527,15 +576,17 @@ section {
       margin: 0;
       height: auto;
       position: relative;
-      background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #191919 50%);
+      background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, rgba(25, 25, 25, 0.8) 15%, #191919 50%, rgba(25, 25, 25, 0) 70%);
       top: -20%;
       margin-bottom: -20%; }
       #projects .container .card .info h3 {
         margin: 0;
         margin-top: 10px;
-        font-size: .9em; }
+        font-size: 1.2em;
+        padding-top: 13px; }
       #projects .container .card .info p {
-        font-size: 77%; }
+        font-size: 77%;
+        margin-top: 5px; }
       #projects .container .card .info .study {
         border: 2px solid;
         border-image: linear-gradient(135deg, rgba(0, 199, 182, 0.7) 50%, rgba(0, 94, 114, 0.7) 100%) 1;
