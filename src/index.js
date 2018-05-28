@@ -10,6 +10,7 @@ const $body = $('body');
 const $elems = $('.pause-anim');
 const $cards = $('.card');
 const $window = $(window);
+const $desktopCheckbox = $('#tog_desktop');
 const $module = $('.project-module');
 const $moduleText = $module.find('.text');
 const $moduleTitle = $module.find('h3');
@@ -65,7 +66,7 @@ $('.study').on("click", function() {
     }, 270);
 })
 
-$('#tog_desktop').on("change", function(e) {
+$desktopCheckbox.on("change", function(e) {
 	$moduleImg.attr('src',projectImages[0].getAttribute('src'));
 	$moduleImg.toggleClass("mobile_view");
 })
@@ -101,14 +102,18 @@ function show_projct_module(domNode) {
 	let img_src = $node.parent().siblings('.project-img').children('img').attr('src');
 	projectImages = $node.parent().siblings('.project-img').children('img');
 	if(projectImages.length === 1){
-		$moduleToggle.toggleClass("hidden");
+		$moduleToggle.addClass("hidden");
+	} else {
+		$moduleToggle.removeClass("hidden");
 	}
 	$moduleText.html(text);
 	$moduleTitle.html(title);
 	$moduleImg.attr('src',img_src);
+	$moduleImg.removeClass("mobile_view");
 	$moduleLink.attr('href',link);
 	$moduleCode.attr('href',code);
 	$moduleTools.html(tools);
+	$desktopCheckbox.prop('checked', true)
 
 
 	for(let card of $cards){

@@ -123,6 +123,10 @@
 							opacity: 1;
 						}
 
+						&.hidden {
+							display: none;
+						}
+
 					}
 
 					.links{
@@ -171,7 +175,8 @@
 					}
 
 					.module-img {
-						max-width: 400px;
+						width: 100%;
+						max-width: 300px;
 						img {
 							width: 100%;
 							height: auto;
@@ -253,7 +258,7 @@
 				margin: 0;
 				height: auto;
 				position: relative;
-				background: linear-gradient(180deg, rgba(25, 25, 25,0)0%, rgba(25, 25, 25,.8)15%, rgba(25, 25, 25,1)50%, rgba(25, 25, 25,0)70%);
+				background: linear-gradient(180deg, rgba(25, 25, 25,0)14%, rgba(25, 25, 25,.8)15%, rgba(25, 25, 25,1)50%, rgba(25, 25, 25,0)70%);
 				top: -20%;
 				margin-bottom: -20%;
 
