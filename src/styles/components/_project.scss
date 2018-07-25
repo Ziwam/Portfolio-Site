@@ -127,6 +127,10 @@
 							display: none;
 						}
 
+						@include mobile {
+							width: 90%;
+						}
+
 					}
 
 					.links{
@@ -242,7 +246,7 @@
 					margin: auto;
 				   max-width: 300px;
 
-				   &.mobile-img {
+				   &.mobile-img, &.mockup-img {
 				   	display: none;
 				   }
 				}

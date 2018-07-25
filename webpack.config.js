@@ -24,8 +24,7 @@ module.exports = {
 				test: /\.(otf|ttf|eot|woff|woff2|jpg|png|svg)$/,
 			    loader: 'url-loader',
 			    options: {
-			      name: '/assets/[name].[ext]',
-			      limit: 25000
+			      name: '/assets/[name].[ext]'
 			    },
 		},
 	    {

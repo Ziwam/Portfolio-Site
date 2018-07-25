@@ -68,11 +68,17 @@ $('.study').on("click", function() {
 
 $desktopCheckbox.on("change", function(e) {
 	$moduleImg.attr('src',projectImages[0].getAttribute('src'));
-	$moduleImg.toggleClass("mobile_view");
+	$moduleImg.removeClass();
 })
 $('#tog_mobile').on("change", function(e) {
 	$moduleImg.attr('src',projectImages[1].getAttribute('src'));
-	$moduleImg.toggleClass("mobile_view");
+	$moduleImg.removeClass();
+	$moduleImg.addClass("mobile_view");
+})
+$('#tog_mockup').on("change", function(e) {
+	$moduleImg.attr('src',projectImages[2].getAttribute('src'));
+	$moduleImg.removeClass();
+	$moduleImg.addClass("mockup_view");
 })
 
 function check_if_in_view() {
