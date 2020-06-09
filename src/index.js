@@ -1,10 +1,6 @@
 import "./styles/app.scss";
-import fb from "./assets/fb.svg";
-import ig from "./assets/ig.svg";
-import li from "./assets/li.svg";
-import gh from "./assets/gh.svg";
-import pic from "./assets/self_portrait.jpg";
 import $ from "jquery";
+import constants from './constants'
 
 const $body = $('body');
 const $elems = $('.pause-anim');
@@ -25,13 +21,6 @@ const $nav_bar = $('nav');
 const viewOffset = 90;
 
 let projectImages = [];
-
-$('.facebook_icon').attr('src',fb);
-$('.instagram_icon').attr('src',ig);
-$('.linkedin_icon').attr('src',li);
-$('.github_icon').attr('src',gh);
-$('.portrait').attr('src',pic);
-
 let window_height = $window.height();
 
 $menu.click(()=>{
