@@ -494,6 +494,8 @@ section {
             opacity: 1; }
           #projects .container .project-module .info-container .module-img .toggle.hidden {
             display: none; }
+          #projects .container .project-module .info-container .module-img .toggle #tog_mockup_label.hidden, #projects .container .project-module .info-container .module-img .toggle #tog_mobile_label.hidden {
+            display: none; }
           @media (max-width: 768px) {
             #projects .container .project-module .info-container .module-img .toggle {
               width: 90%; } }
@@ -777,22 +779,22 @@ section {
 
 @-webkit-keyframes anim-shadow {
   0% {
-    box-shadow: -0.1px 0.1px 0.1px 0.1px transparent; }
+    box-shadow: -0.1px 0.1px 0.1px 0.1px rgba(0, 0, 0, 0); }
   100% { } }
 
 @-moz-keyframes anim-shadow {
   0% {
-    box-shadow: -0.1px 0.1px 0.1px 0.1px transparent; }
+    box-shadow: -0.1px 0.1px 0.1px 0.1px rgba(0, 0, 0, 0); }
   100% { } }
 
 @-o-keyframes anim-shadow {
   0% {
-    box-shadow: -0.1px 0.1px 0.1px 0.1px transparent; }
+    box-shadow: -0.1px 0.1px 0.1px 0.1px rgba(0, 0, 0, 0); }
   100% { } }
 
 @keyframes anim-shadow {
   0% {
-    box-shadow: -0.1px 0.1px 0.1px 0.1px transparent; }
+    box-shadow: -0.1px 0.1px 0.1px 0.1px rgba(0, 0, 0, 0); }
   100% { } }
 
 @-webkit-keyframes grow-skill {
