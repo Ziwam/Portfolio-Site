@@ -7,6 +7,8 @@ const $elems = $('.pause-anim');
 const $cards = $('.card');
 const $window = $(window);
 const $desktopCheckbox = $('#tog_desktop');
+const $mockupLabel = $('#tog_mockup_label');
+const $mobileLabel = $('#tog_mobile_label');
 const $module = $('.project-module');
 const $moduleText = $module.find('.text');
 const $moduleTitle = $module.find('h3');
@@ -100,7 +102,15 @@ function show_projct_module(domNode) {
 		$moduleToggle.addClass("hidden");
 	} else {
 		$moduleToggle.removeClass("hidden");
+		if(projectImages.length > 0 && projectImages.length < 3) {
+			const lastLabel = projectImages[1].className
+			lastLabel.match(/mobile/) ?
+				$mockupLabel.addClass('hidden') :
+				$mobileLabel.addClass('hidden')
+		}
 	}
+	
+
 	$moduleText.html(text);
 	$moduleTitle.html(title);
 	$moduleImg.attr('src',img_src);
@@ -109,7 +119,6 @@ function show_projct_module(domNode) {
 	$moduleCode.attr('href',code);
 	$moduleTools.html(tools);
 	$desktopCheckbox.prop('checked', true)
-
 
 	for(let card of $cards){
 		card.classList.toggle('hidden');
@@ -124,6 +133,10 @@ function show_projct_cards(evn) {
 	for(let card of $cards){
 		card.classList.toggle('hidden');
 	}
+
+
+	$mockupLabel.removeClass('hidden');
+	$mobileLabel.removeClass('hidden');
 }
 
 function reset_nav_bar() {

@@ -127,6 +127,12 @@
 							display: none;
 						}
 
+						#tog_mockup_label, #tog_mobile_label {
+							&.hidden {
+								display: none;
+							}
+						}
+
 						@include mobile {
 							width: 90%;
 						}

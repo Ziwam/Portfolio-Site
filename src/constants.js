@@ -38,6 +38,13 @@ export const MR_MOCK = "https://lh3.googleusercontent.com/pw/ACtC-3cnqc4cSE3S1V2
 export const MG_DESK = "https://lh3.googleusercontent.com/pw/ACtC-3dTZQ42_ssSPrHZSgqveXdtPtbZVzXRw4VPNhj2gFmjFVZFI7uAVayYs2LNcC7jWY-V7700uTQBxdop-jSyJs_tLbvWwOTQyTUvOK-AlzO3RPJ7c4E9tRg7Zbn2vMKNYI39cL8hjOwJZIVDtnT_AnlA=w1024-h900-no" 
 export const MG_MOBL = "https://lh3.googleusercontent.com/pw/ACtC-3em8vE0Dp2ZwSrQvSSu2Xfe2mFBV6HIjpzVrpq8tS5-CnHZxuj9MZYd7K6eHB1I0AODiwZL0aTkL7JQGBhro3fm2SXQnITbdkylrR424iPKkB0mofAZFguQmD7yQTYDQQustLb6Y2ZzIAGiv544KTUk=w469-h900-no"
 
+// Restaurant Reviews
+export const RR_DESK = "https://lh3.googleusercontent.com/pw/ACtC-3eqCNB_XirftBs7F-DZE3XzfKWzYXh4JDJ5wpNDNqx-4Xc_ayKwZStH8DuNNwtDNHrrj67aGLfA_KvWo2X8Tl2584xZu3SJmk7TeL_z9sJ8KSb12UPBl7JG5lwPChVY7OrbLtb-EorK9DSu81e1PftZ=w1024-h900-no" 
+export const RR_MOBL = "https://lh3.googleusercontent.com/pw/ACtC-3fg7v4pFPkzqNStF7y36BEjmtyW11jbtUKefsaCNHZ5O1gL2LjDdJtMpsCmKq50MbIKhJ8wU4RA0aLXbHA-VxA4DlsYRCkhVFudOXsCXP6IUShvBPltZ3o6vugK_ayHJN9H_gBAMZnLJSxN_jr9GvaW=w469-h900-no"
+
+// Jasmine Feedreader
+export const JF_MOBL = "https://lh3.googleusercontent.com/pw/ACtC-3fhbP4BCTO-HjjLKM6Ttd4Jgtw3XRX735eymgHrzlMKAIUSaTDZUmFMeDLqTu1CwIwS5psQXtOuLDkjywjHiAuF7lOnHWwFCZlGjbKKHd_jX3OXpy2N3mHljVupnBHNK65MQeQRQgvs_X-rQX_p0oL5=w1024-h900-no"
+
 $('#facebook_icon').attr('src',fb);
 $('#instagram_icon').attr('src',ig);
 $('#linkedin_icon').attr('src',li);
@@ -71,10 +78,7 @@ $('#mr-mockup-img').attr('src',MR_MOCK);
 $('#mg-desk-img').attr('src',MG_DESK);
 $('#mg-mobile-img').attr('src',MG_MOBL);
 
-// $('#rp-desk-img').attr('src',TIC_DESK);
-// $('#rp-mobile-img').attr('src',TIC_DESK);
-// $('#rp-mockup-img').attr('src',TIC_DESK);
+$('#rr-desk-img').attr('src',RR_DESK);
+$('#rr-mobile-img').attr('src',RR_MOBL);
 
-// $('#rp-desk-img').attr('src',TIC_DESK);
-// $('#rp-mobile-img').attr('src',TIC_DESK);
-// $('#rp-mockup-img').attr('src',TIC_DESK);
+$('#jf-desk-img').attr('src',JF_MOBL);
